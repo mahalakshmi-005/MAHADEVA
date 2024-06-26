@@ -1,0 +1,43 @@
+{% extends 'main/base.html' %}
+{% load static %} 
+
+{% block content %}
+<div class="jumpbotron">
+<div class="container text-center">
+  <br>
+  <br>
+  <div class="row">
+    <div class="col-sm-4">
+    	<div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <i><b><h2 class="card-title"><font color="orange">Contact me :</h2></b></i></font>
+        <p class="card-text">For booking your's decorating orders.</p>
+        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <hr>
+       <p> <a href="#" class="btn btn-primary">Facebook.</a></p>
+       <p> <a href="@beautyy_fool_05" class="btn btn-primary">Instagram.</a></p>
+       <p> <a href="#" class="btn btn-primary">Linked In.</a></p>
+        <p> <a href="#" class="btn btn-primary">Twitter.</a></p>
+        <p><b>Phone Number : 9585885247.</p></b>
+        <p><b>E-mail: mahalakshmidd744@gamil.com</p></b> 
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+  <div class="col-sm-6">
+      <div class="card">
+       <div class="card-body">
+       <h5 class="card-title"><b>Send me a Message !!</h5>
+        <form method="post" action="/contact/">
+          {% csrf_token %}
+         {{form.as_p}}
+         <button type="submit" class="btn btn-primary">Submit</button>
+       </form>
+     </div>
+ </div>
+ </div>
+  </div>
+</div>
+</div>
+{% endblock %}
